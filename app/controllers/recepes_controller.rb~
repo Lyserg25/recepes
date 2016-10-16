@@ -14,14 +14,16 @@ class RecepesController < ApplicationController
 
   # GET /recepes/new
   def new
-		@skip_rating = true
     @recepe = Recepe.new
   end
 
   # GET /recepes/1/edit
   def edit
-		@skip_rating = true
   end
+
+	def rate
+		@is_rating = true
+	end
 
   # POST /recepes
   # POST /recepes.json

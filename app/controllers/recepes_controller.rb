@@ -1,5 +1,5 @@
 class RecepesController < ApplicationController
-  before_action :set_recepe, only: [:show, :edit, :update, :destroy]
+  before_action :set_recepe, only: [:show, :edit, :update, :destroy, :rate]
 
   # GET /recepes
   # GET /recepes.json
@@ -20,6 +20,10 @@ class RecepesController < ApplicationController
   # GET /recepes/1/edit
   def edit
   end
+
+	def rate
+		@is_rating = true
+	end
 
   # POST /recepes
   # POST /recepes.json

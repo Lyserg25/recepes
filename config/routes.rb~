@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :recepes
 
-	get '/recepes/:id/rate', to: 'recepes#rate', as: "rate_recepe"
+	get '/recepes/rate', to: 'recepes#rate', as: "rate_recepe"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

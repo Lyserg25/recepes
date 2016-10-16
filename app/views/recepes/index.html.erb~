@@ -31,7 +31,7 @@
         <td><%= recepe.tag %></td>
         <td>
 					<% if recepe.rating == nil %> 
-						<%= link_to 'Rate', rate_recepe_path(recepe) %> 
+						<%= link_to 'Rate', edit_recepe_path(recepe) %> 
 					<% else %> 
 						<%= recepe.rating %> 
 					<% end %>
