@@ -1,0 +1,53 @@
+<%= form_for(@recepe) do |f| %>
+  <% if @recepe.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@recepe.errors.count, "error") %> prohibited this recepe from being saved:</h2>
+
+      <ul>
+      <% @recepe.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :category %><br>
+    <%= f.text_field :category %>
+  </div>
+  <div class="field">
+    <%= f.label :people %><br>
+    <%= f.number_field :people %>
+  </div>
+  <div class="field">
+    <%= f.label :difficulty %><br>
+    <%= f.text_field :difficulty %>
+  </div>
+  <div class="field">
+    <%= f.label :duration %><br>
+    <%= f.number_field :duration %>
+  </div>
+  <div class="field">
+    <%= f.label :ingredients %><br>
+    <%= f.text_area :ingredients %>
+  </div>
+  <div class="field">
+    <%= f.label :preparation %><br>
+    <%= f.text_area :preparation %>
+  </div>
+  <div class="field">
+    <%= f.label :tag %><br>
+    <%= f.text_field :tag %>
+  </div>
+  <div class="field">
+    <%= f.label :rating %><br>
+    <%= f.number_field :rating %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

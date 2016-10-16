@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Recepes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Category</th>
+      <th>People</th>
+      <th>Difficulty</th>
+      <th>Duration</th>
+      <th>Ingredients</th>
+      <th>Preparation</th>
+      <th>Tag</th>
+      <th>Rating</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @recepes.each do |recepe| %>
+      <tr>
+        <td><%= recepe.title %></td>
+        <td><%= recepe.category %></td>
+        <td><%= recepe.people %></td>
+        <td><%= recepe.difficulty %></td>
+        <td><%= recepe.duration %></td>
+        <td><%= recepe.ingredients %></td>
+        <td><%= recepe.preparation %></td>
+        <td><%= recepe.tag %></td>
+        <td><%= recepe.rating %></td>
+        <td><%= link_to 'Show', recepe %></td>
+        <td><%= link_to 'Edit', edit_recepe_path(recepe) %></td>
+        <td><%= link_to 'Destroy', recepe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Recepe', new_recepe_path %>

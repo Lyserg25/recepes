@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @recepe.title %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @recepe.category %>
+</p>
+
+<p>
+  <strong>People:</strong>
+  <%= @recepe.people %>
+</p>
+
+<p>
+  <strong>Difficulty:</strong>
+  <%= @recepe.difficulty %>
+</p>
+
+<p>
+  <strong>Duration:</strong>
+  <%= @recepe.duration %>
+</p>
+
+<p>
+  <strong>Ingredients:</strong>
+  <%= @recepe.ingredients %>
+</p>
+
+<p>
+  <strong>Preparation:</strong>
+  <%= @recepe.preparation %>
+</p>
+
+<p>
+  <strong>Tag:</strong>
+  <%= @recepe.tag %>
+</p>
+
+<p>
+  <strong>Rating:</strong>
+  <%= @recepe.rating %>
+</p>
+
+<%= link_to 'Edit', edit_recepe_path(@recepe) %> |
+<%= link_to 'Back', recepes_path %>
