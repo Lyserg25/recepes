@@ -26,12 +26,12 @@
         <td><%= recepe.people %></td>
         <td><%= recepe.difficulty %></td>
         <td><%= recepe.duration %></td>
-        <td><%= recepe.ingredients %></td>
+        <td><%= list_ingredients %></td>
         <td><%= recepe.preparation %></td>
         <td><%= recepe.tag %></td>
         <td>
 					<% if recepe.rating == nil %> 
-						<%= link_to 'Rate', edit_recepe_path(recepe) %> 
+						<%= link_to 'Rate', rate_recepe_path(recepe) %> 
 					<% else %> 
 						<%= recepe.rating %> 
 					<% end %>

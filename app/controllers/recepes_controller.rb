@@ -1,5 +1,6 @@
 class RecepesController < ApplicationController
   before_action :set_recepe, only: [:show, :edit, :update, :destroy, :rate]
+	helper_method :list_ingredients
 
   # GET /recepes
   # GET /recepes.json

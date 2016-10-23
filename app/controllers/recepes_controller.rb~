@@ -1,5 +1,6 @@
 class RecepesController < ApplicationController
-  before_action :set_recepe, only: [:show, :edit, :update, :destroy]
+  before_action :set_recepe, only: [:show, :edit, :update, :destroy, :rate]
+	helper_method :list_ingredients
 
   # GET /recepes
   # GET /recepes.json
@@ -23,6 +24,15 @@ class RecepesController < ApplicationController
 
 	def rate
 		@is_rating = true
+	end
+
+	def list_ingredients
+		all_ingredients = ""
+		@recepe.title
+		@recepe.ingredients_entries.each do |ingredient|
+			all_ingredients = all_ingredients + ingredient + ", "
+		end
+		return all_ingredients
 	end
 
   # POST /recepes

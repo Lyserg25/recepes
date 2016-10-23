@@ -1,3 +1,11 @@
 class Recepe < ActiveRecord::Base
 	has_many :ingredients_entries
+
+	def list_ingredients
+		all_ingredients = ""
+		self.ingredients_entries.each do |ingredient|
+			all_ingredients = all_ingredients + ingredient + ", "
+		end
+		return all_ingredients
+	end
 end
