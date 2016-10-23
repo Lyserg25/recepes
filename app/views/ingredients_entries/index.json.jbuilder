@@ -1,0 +1,1 @@
+json.array! @ingredients_entries, partial: 'ingredients_entries/ingredients_entry', as: :ingredients_entry

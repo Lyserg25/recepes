@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :ingredients_entries
   resources :recepes
 
 	get '/recepes/:id/rate', to: 'recepes#rate', as: "rate_recepe"
